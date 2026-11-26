@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4E435B65-925A-4C6F-8368-D34CF33B36B4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44388</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG=-1,TRACE=-1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE=-1</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="assets1\css\web\agritech-solutions.css" />
+    <Content Include="assets1\css\web\AISaaS - Copy.css" />
+    <Content Include="assets1\css\web\AISaaS.css" />
+    <Content Include="assets1\css\web\automotive-solutions.css" />
+    <Content Include="assets1\css\web\client-success-stories.css" />
+    <Content Include="assets1\css\web\contact.css" />
+    <Content Include="assets1\css\web\currentopenings.css" />
+    <Content Include="assets1\css\web\digital-chip-design.css" />
+    <Content Include="assets1\css\web\edutech-solutions.css" />
+    <Content Include="assets1\css\web\fintech-solutions.css" />
+    <Content Include="assets1\css\web\fivegsixgtechnologies.css" />
+    <Content Include="assets1\css\web\govtech-solutions.css" />
+    <Content Include="assets1\css\web\internetofthings.css" />
+    <Content Include="assets1\css\web\internship.css" />
+    <Content Include="assets1\css\web\leadership-team.css" />
+    <Content Include="assets1\css\web\lifeatcogniot.css" />
+    <Content Include="assets1\css\web\logistics-supply-chain.css" />
+    <Content Include="assets1\css\web\mission-vision.css" />
+    <Content Include="assets1\css\web\OurClientsPartners.css" />
+    <Content Include="assets1\css\web\our_story.css" />
+    <Content Include="assets1\css\web\project-portfolio.css" />
+    <Content Include="assets1\css\web\RecognitionMilestones.css" />
+    <Content Include="assets1\css\web\style.css" />
+    <Content Include="assets1\css\web\testimonial.css" />
+    <Content Include="assets1\images\aquaponics-greenhouse.jpg" />
+    <Content Include="assets1\images\cogniot-original-logo.png" />
+    <Content Include="assets1\images\connected-healthcare.jpg" />
+    <Content Include="assets1\images\engineering-lab.jpg" />
+    <Content Include="assets1\images\favicon.png" />
+    <Content Include="assets1\images\hero-iot-product-development.jpg" />
+    <Content Include="assets1\images\hero-it-services.jpg" />
+    <Content Include="assets1\images\hero-projects-accomplished.jpg" />
+    <Content Include="assets1\js\site.js" />
+    <Content Include="web\agritechsolutions.aspx" />
+    <Content Include="web\AISaaS.aspx" />
+    <Content Include="web\automotivesolutions.aspx" />
+    <Content Include="web\clientsuccessstories.aspx" />
+    <Content Include="web\Contact.aspx" />
+    <Content Include="assets1\css\Content\bootstrap-grid.css" />
+    <Content Include="assets1\css\Content\bootstrap-grid.min.css" />
+    <Content Include="assets1\css\Content\bootstrap-grid.rtl.css" />
+    <Content Include="assets1\css\Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.css" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.min.css" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.rtl.css" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.css" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.min.css" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.rtl.css" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="assets1\css\Content\bootstrap.css" />
+    <Content Include="assets1\css\Content\bootstrap.min.css" />
+    <Content Include="assets1\css\Content\bootstrap.rtl.css" />
+    <Content Include="assets1\css\Content\bootstrap.rtl.min.css" />
+    <Content Include="assets1\css\Content\Site.css" />
+    <Content Include="web\currentopenings.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="web\DigitalChipDesign.aspx" />
+    <Content Include="web\edutechsolutions.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="web\fintechsolutions.aspx" />
+    <Content Include="web\fivegsixgtechnologies.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="web\govtechsolutions.aspx" />
+    <Content Include="web\internetofthings.aspx" />
+    <Content Include="web\Internship.aspx" />
+    <Content Include="web\LeadershipTeam.aspx" />
+    <Content Include="web\lifeatcogniot.aspx" />
+    <Content Include="web\logisticsupplychain.aspx" />
+    <Content Include="web\MissionVision.aspx" />
+    <Content Include="web\OurClientsPartners.aspx" />
+    <Content Include="web\our_story.aspx" />
+    <Content Include="web\projectportfolio.aspx" />
+    <Content Include="web\RecognitionMilestones.aspx" />
+    <Content Include="assets1\js\Scripts\bootstrap.bundle.js" />
+    <Content Include="assets1\js\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="assets1\js\Scripts\bootstrap.esm.js" />
+    <Content Include="assets1\js\Scripts\bootstrap.esm.min.js" />
+    <Content Include="assets1\js\Scripts\bootstrap.js" />
+    <Content Include="assets1\js\Scripts\bootstrap.min.js" />
+    <Content Include="assets1\js\Scripts\bootstrap.min.js.map" />
+    <Content Include="assets1\js\Scripts\bootstrap.js.map" />
+    <Content Include="assets1\js\Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="assets1\js\Scripts\bootstrap.esm.js.map" />
+    <Content Include="assets1\js\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="assets1\js\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="assets1\css\Content\bootstrap.rtl.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap.rtl.css.map" />
+    <Content Include="assets1\css\Content\bootstrap.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-utilities.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-reboot.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-grid.min.css.map" />
+    <Content Include="assets1\css\Content\bootstrap-grid.css.map" />
+    <Content Include="web\Testimonial.aspx" />
+    <Content Include="zsite1.aspx" />
+    <Content Include="ZMasterPage.master" />
+    <None Include="assets1\js\Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="assets1\js\Scripts\jquery-3.7.0.js" />
+    <Content Include="assets1\js\Scripts\jquery-3.7.0.min.js" />
+    <Content Include="assets1\js\Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="assets1\js\Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="assets1\js\Scripts\modernizr-2.8.3.js" />
+    <Content Include="assets1\js\Scripts\WebForms\DetailsView.js" />
+    <Content Include="assets1\js\Scripts\WebForms\Focus.js" />
+    <Content Include="assets1\js\Scripts\WebForms\GridView.js" />
+    <Content Include="assets1\js\Scripts\WebForms\Menu.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MenuStandards.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="assets1\js\Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="assets1\js\Scripts\WebForms\SmartNav.js" />
+    <Content Include="assets1\js\Scripts\WebForms\TreeView.js" />
+    <Content Include="assets1\js\Scripts\WebForms\WebForms.js" />
+    <Content Include="assets1\js\Scripts\WebForms\WebParts.js" />
+    <Content Include="assets1\js\Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="web\agritechsolutions.aspx.vb">
+      <DependentUpon>agritechsolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\agritechsolutions.aspx.designer.vb">
+      <DependentUpon>agritechsolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\AISaaS.aspx.vb">
+      <DependentUpon>AISaaS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\AISaaS.aspx.designer.vb">
+      <DependentUpon>AISaaS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="web\automotivesolutions.aspx.vb">
+      <DependentUpon>automotivesolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\automotivesolutions.aspx.designer.vb">
+      <DependentUpon>automotivesolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\clientsuccessstories.aspx.vb">
+      <DependentUpon>clientsuccessstories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\clientsuccessstories.aspx.designer.vb">
+      <DependentUpon>clientsuccessstories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\currentopenings.aspx.vb">
+      <DependentUpon>currentopenings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\currentopenings.aspx.designer.vb">
+      <DependentUpon>currentopenings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\DigitalChipDesign.aspx.vb">
+      <DependentUpon>DigitalChipDesign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\DigitalChipDesign.aspx.designer.vb">
+      <DependentUpon>DigitalChipDesign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\edutechsolutions.aspx.vb">
+      <DependentUpon>edutechsolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\edutechsolutions.aspx.designer.vb">
+      <DependentUpon>edutechsolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\fintechsolutions.aspx.vb">
+      <DependentUpon>fintechsolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\fintechsolutions.aspx.designer.vb">
+      <DependentUpon>fintechsolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\fivegsixgtechnologies.aspx.vb">
+      <DependentUpon>fivegsixgtechnologies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\fivegsixgtechnologies.aspx.designer.vb">
+      <DependentUpon>fivegsixgtechnologies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="web\govtechsolutions.aspx.vb">
+      <DependentUpon>govtechsolutions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\govtechsolutions.aspx.designer.vb">
+      <DependentUpon>govtechsolutions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\internetofthings.aspx.vb">
+      <DependentUpon>internetofthings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\internetofthings.aspx.designer.vb">
+      <DependentUpon>internetofthings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\Internship.aspx.vb">
+      <DependentUpon>Internship.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Internship.aspx.designer.vb">
+      <DependentUpon>Internship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\LeadershipTeam.aspx.vb">
+      <DependentUpon>LeadershipTeam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\LeadershipTeam.aspx.designer.vb">
+      <DependentUpon>LeadershipTeam.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\lifeatcogniot.aspx.vb">
+      <DependentUpon>lifeatcogniot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\lifeatcogniot.aspx.designer.vb">
+      <DependentUpon>lifeatcogniot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\logisticsupplychain.aspx.vb">
+      <DependentUpon>logisticsupplychain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\logisticsupplychain.aspx.designer.vb">
+      <DependentUpon>logisticsupplychain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZMasterPage.master.vb">
+      <DependentUpon>ZMasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\MissionVision.aspx.vb">
+      <DependentUpon>MissionVision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\MissionVision.aspx.designer.vb">
+      <DependentUpon>MissionVision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\OurClientsPartners.aspx.vb">
+      <DependentUpon>OurClientsPartners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\OurClientsPartners.aspx.designer.vb">
+      <DependentUpon>OurClientsPartners.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\our_story.aspx.vb">
+      <DependentUpon>our_story.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\our_story.aspx.designer.vb">
+      <DependentUpon>our_story.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="web\projectportfolio.aspx.vb">
+      <DependentUpon>projectportfolio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\projectportfolio.aspx.designer.vb">
+      <DependentUpon>projectportfolio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="web\RecognitionMilestones.aspx.vb">
+      <DependentUpon>RecognitionMilestones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\RecognitionMilestones.aspx.designer.vb">
+      <DependentUpon>RecognitionMilestones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="web\Testimonial.aspx.vb">
+      <DependentUpon>Testimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\Testimonial.aspx.designer.vb">
+      <DependentUpon>Testimonial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="zsite1.aspx.vb">
+      <DependentUpon>zsite1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zsite1.aspx.designer.vb">
+      <DependentUpon>zsite1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="assets1\js\Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="assets1\js\Scripts\jquery-3.7.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53658</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44388/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+</Project>

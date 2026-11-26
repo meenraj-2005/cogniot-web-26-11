@@ -1,0 +1,446 @@
+
+<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="ZMasterPage.master.vb" Inherits="WebApplication1.MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="COGNIOT TECHNOLOGY PRIVATE LIMITED" />
+
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server">
+            COGNIOT Technology | Ideas into intelligent impact
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <link rel="icon" href="<%= ResolveUrl("~/assets1/images/favicon.png") %>" type="image/png" />
+
+    <link rel="stylesheet" href="<%= ResolveUrl("~/assets1/css/web/style.css") %>" />
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+    
+
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+    <!-- SKIP NAVIGATION -->
+    <a class="skip-link" href="#main-content">
+        Skip to content
+    </a>
+
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-info-bar">
+            <div class="container header-info-inner">
+                <div class="header-info-contact">
+                    <a href="mailto:ceo@cogniot.co.in">ceo@cogniot.co.in</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="mailto:cogniottech@gmail.com">cogniottech@gmail.com</a>
+                    <a href="tel:+919443721864">+91 94437 21864</a>
+                    <span aria-hidden="true">/</span>
+                    <a href="tel:+919384759691">+91 93847 59691</a>
+                </div>
+                <div class="header-info-social" aria-label="Social media">
+                    <a href="https://twitter.com/" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 5.9a8.2 8.2 0 0 1-2.36.65 4.12 4.12 0 0 0 1.8-2.27 8.2 8.2 0 0 1-2.6.99 4.1 4.1 0 0 0-7 3.74 11.64 11.64 0 0 1-8.45-4.28 4.1 4.1 0 0 0 1.27 5.47 4.08 4.08 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.29 4.02 4.1 4.1 0 0 1-1.85.07 4.11 4.11 0 0 0 3.83 2.85A8.24 8.24 0 0 1 2 18.39a11.62 11.62 0 0 0 6.29 1.84c7.55 0 11.68-6.25 11.68-11.68l-.01-.53A8.34 8.34 0 0 0 22 5.9Z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.87.24-1.46 1.55-1.46h1.66V3.96c-.29-.04-1.3-.13-2.47-.13-2.45 0-4.13 1.5-4.13 4.25V10H7.33v3h2.78v8z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Zm0 2A2.5 2.5 0 0 0 5 7.5v9A2.5 2.5 0 0 0 7.5 19h9a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 16.5 5zm4.5 3a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm4.75-3.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5.25 10h2.5v9h-2.5zM10 10h2.4v1.23h.04c.33-.63 1.14-1.43 2.36-1.43 2.53 0 3 1.66 3 3.82V19h-2.5v-4.88c0-.93-.02-2.13-1.3-2.13-1.3 0-1.5 1.01-1.5 2.06V19H10z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container site-header-inner">
+
+
+            <!-- WEBSITE LOGO -->
+            <a class="site-brand"
+               href="<%= ResolveUrl("~/Default.aspx") %>"
+               aria-label="COGNIOT Technology home">
+
+                <img src="<%= ResolveUrl("~/assets1/images/cogniot-original-logo.png") %>"
+                     alt="COGNIOT — Next Generation Technology" />
+
+            </a>
+
+
+            <!-- MOBILE MENU BUTTON -->
+            <button type="button"
+        class="mobile-menu-toggle"
+        id="mobileMenuToggle"
+        aria-label="Open navigation"
+        aria-controls="primary-navigation"
+        aria-expanded="false">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+
+            <!-- MAIN NAVIGATION -->
+            <nav class="site-nav"
+                 id="primary-navigation"
+                 aria-label="Primary navigation">
+
+
+                <!-- HOME -->
+                <a class="nav-link"
+                   href="<%= ResolveUrl("~/Default.aspx") %>">
+
+                    Home
+
+                </a>
+
+
+                <!-- ABOUT US DROPDOWN -->
+                <div class="nav-dropdown">
+
+                    <button type="button"
+                            class="nav-dropdown-toggle"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+
+                        About Us <span class="dropdown-arrow">⌄</span>
+
+                    </button>
+
+                    <div class="nav-panel">
+
+                        <a href="<%= ResolveUrl("~/web/our_story.aspx") %>">
+                            Our Story
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/MissionVision.aspx") %>">
+                            Mission &amp; Vision
+                        </a>
+
+                        
+
+                        <a href="<%= ResolveUrl("~/web/RecognitionMilestones.aspx") %>">
+                             Recognitions &amp Milestones
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/OurClientsPartners.aspx") %>">
+                            Our Clients &amp Partners
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Technologies DROPDOWN -->
+                <div class="nav-dropdown">
+
+                    <button type="button"
+                            class="nav-dropdown-toggle"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+
+                        Technologies <span class="dropdown-arrow">⌄</span>
+
+                    </button>
+
+                    <div class="nav-panel">
+
+                        <a href="<%= ResolveUrl("~/web/AISaaS.aspx") %>">
+                           AI & SaaS
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/internetofthings.aspx") %>">
+                            Internet of Things (IoT)
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/fivegsixgtechnologies.aspx") %>">
+                            5G &amp 6G Technologies
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/DigitalChipDesign.aspx") %>">
+                            Digital Chip Design
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INDUSTRIES -->
+                <div class="nav-dropdown">
+
+            <button type="button"
+                class="nav-dropdown-toggle"
+                aria-haspopup="true"
+                aria-expanded="false">
+
+                Industries <span class="dropdown-arrow">⌄</span>
+
+                </button>
+
+
+                    <div class="nav-panel">
+
+                        <a href="<%= ResolveUrl("~/web/govtechsolutions.aspx") %>">
+                                 GovTech
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/agritechsolutions.aspx") %>">
+                            AgriTech
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/fintechsolutions.aspx") %>">
+                            FinTech
+                       </a>
+
+                         <a href="<%= ResolveUrl("~/web/edutechsolutions.aspx") %>">
+                            EduTech
+                        </a>
+
+                         <a href="<%= ResolveUrl("~/web/logisticsupplychain.aspx") %>">
+                            Logistics &amp Supply Chain
+                         </a>
+
+                        <a href="<%= ResolveUrl("~/web/automotivesolutions.aspx") %>">
+                            Automotive
+                         </a>
+
+                    </div>
+
+                    </div>
+
+
+                <!-- Our Work -->
+                   <div class="nav-dropdown">
+
+                    <button type="button"
+                        class="nav-dropdown-toggle"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+
+                        Our Work <span class="dropdown-arrow">⌄</span>
+
+                      </button>
+
+
+                        <div class="nav-panel">
+
+                            <a href="<%= ResolveUrl("~/web/projectportfolio.aspx") %>">
+                                    Project Portfolio
+                            </a>
+
+                            <a href="<%= ResolveUrl("~/web/clientsuccessstories.aspx") %>">
+                                       Client Success Stories
+                             </a>
+
+                            <a href="<%= ResolveUrl("~/web/Testimonial.aspx") %>">
+                                        Testimonials
+                             </a>
+
+
+                        </div>
+                    </div>
+
+
+                <!-- CAREERS DROPDOWN -->
+                <div class="nav-dropdown">
+
+                    <button type="button"
+                            class="nav-dropdown-toggle"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+
+                        Careers <span class="dropdown-arrow">⌄</span>
+
+                    </button>
+
+                    <div class="nav-panel">
+
+                        <a href="<%= ResolveUrl("~/web/lifeatcogniot.aspx") %>">
+                            Life at Cogniot
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/currentopenings.aspx") %>">
+                            Current Openings
+                        </a>
+
+                        <a href="<%= ResolveUrl("~/web/Internship.aspx") %>">
+                            Internships
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTACT -->
+                <a class="nav-link mobile-contact-link"
+                   href="<%= ResolveUrl("~/web/Contact.aspx") %>">
+
+                    Contact Us
+
+                </a>
+
+
+            </nav>
+
+
+            <!-- HEADER CONTACT BUTTON -->
+            <a class="button header-cta"
+               href="<%= ResolveUrl("~/web/Contact.aspx") %>">
+
+               Let's talk <span>&#8599;</span>
+
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN PAGE CONTENT -->
+    <main id="main-content">
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- FOOTER BRAND -->
+            <div class="footer-brand-column">
+
+                <a class="footer-brand"
+                   href="<%= ResolveUrl("~/Default.aspx") %>">
+
+                    <img src="<%= ResolveUrl("~/assets1/images/cogniot-original-logo.png") %>"
+                         alt="COGNIOT — Next Generation Technology" />
+
+                </a>
+
+                <p>
+                    Location
+                </p>
+                    <p>II-Floor, No.533/3, Balaji Nagar, Alampatti Post, Kovilpatti, Thoothukudi District, Tamil Nadu-628503</p>
+
+                <div class="footer-socials" aria-label="Social media">
+                    <span class="footer-social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM5.25 10h2.5v8h-2.5zM10 10h2.4v1.1h.04c.33-.63 1.14-1.3 2.36-1.3 2.53 0 3 1.66 3 3.82V18h-2.5v-3.88c0-.93-.02-2.13-1.3-2.13-1.3 0-1.5 1.01-1.5 2.06V18H10z"/></svg>
+                    </span>
+                    <span class="footer-social-icon" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 20v-7h2.35l.35-2.75H13.5V8.5c0-.8.22-1.35 1.38-1.35h1.47V4.7c-.25-.03-1.1-.1-2.1-.1-2.08 0-3.5 1.27-3.5 3.6v2.05H8.4V13h2.35v7z"/></svg>
+                    </span>
+                    <span class="footer-social-icon" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 4h9A3.5 3.5 0 0 1 20 7.5v9a3.5 3.5 0 0 1-3.5 3.5h-9A3.5 3.5 0 0 1 4 16.5v-9A3.5 3.5 0 0 1 7.5 4Zm0 2A1.5 1.5 0 0 0 6 7.5v9A1.5 1.5 0 0 0 7.5 18h9a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 16.5 6zm4.5 2a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm0 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm4.25-3.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z"/></svg>
+                    </span>
+                    <span class="footer-social-icon" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.28 5 12 5 12 5s-6.28 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.72 19 12 19 12 19s6.28 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8ZM10 15.2V8.8l5.5 3.2z"/></svg>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- EXPLORE LINKS -->
+            <div class="footer-link-group">
+
+                <h2>Explore</h2>
+
+                <a href="<%= ResolveUrl("~/web/our_story.aspx") %>">
+                    About COGNIOT
+                </a>
+
+                <a href="<%= ResolveUrl("~/web/AISaaS.aspx") %>">
+                    Services
+                </a>
+
+                <a href="<%= ResolveUrl("~/web/govtechsolutions.aspx") %>">
+                    Industries
+                </a>
+
+                <a href="<%= ResolveUrl("~/web/projectPortfolio.aspx") %>">
+                    Portfolio
+                </a>
+
+            </div>
+
+
+            <!-- WORK WITH US -->
+            <div class="footer-link-group">
+
+                <h2>Work with us</h2>
+
+                <a href="<%= ResolveUrl("~/web/Internship.aspx") %>">
+                    Internship
+                </a>
+
+                <a href="<%= ResolveUrl("~/web/currentopenings.aspx") %>">
+                    Job opportunities
+                </a>
+
+                <a href="<%= ResolveUrl("~/web/Contact.aspx") %>">
+                    Start a conversation
+                </a>
+
+                <a href="mailto:cogniottech@gmail.com">
+                    cogniottech@gmail.com
+                </a>
+
+                <a href="mailto:ceo@cogniot.co.in">
+                     ceo@cogniot.co.in
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+        <div class="container footer-bottom">
+
+            <span>
+               <asp:Literal ID="litYear" runat="server" />
+                COGNIOT TECHNOLOGY PRIVATE LIMITED All Rights Reserved
+            </span>
+
+            <span>
+                Next Generation Technology
+            </span>
+
+        </div>
+
+    </footer>
+
+
+</form>
+
+
+<!-- WEBSITE JAVASCRIPT -->
+<script src="<%= ResolveUrl("~/assets1/JS/site.js") %>"></script>
+
+</body>
+</html>
